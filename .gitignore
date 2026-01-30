@@ -1,0 +1,53 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+
+# Django stuff
+*.log
+local_settings.py
+db.sqlite3
+/media/
+
+# Static files (if collected locally for testing, otherwise managed during deployment)
+/static/
+
+# Editor configurations
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Operating System files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*,cover
+.hypothesis/
+
+# Translations
+*.mo
+*.pot
+
+# Pipenv lock file (if used)
+# Pipfile.lock
