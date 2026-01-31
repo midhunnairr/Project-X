@@ -1,0 +1,54 @@
+<div class="login-container">
+  <div class="login-box">
+    <div class="logo">
+      <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+        <rect x="8" y="16" width="32" height="24" rx="4" fill="#8b5cf6"/>
+        <circle cx="16" cy="24" r="2" fill="white"/>
+        <circle cx="24" cy="28" r="2" fill="white"/>
+        <circle cx="32" cy="24" r="2" fill="white"/>
+        <rect x="14" y="20" width="2" height="8" rx="1" fill="white"/>
+        <rect x="10" y="24" width="10" height="2" rx="1" fill="white"/>
+      </svg>
+    </div>
+
+    <h1 class="title">Login in to GameVault</h1>
+
+    <form (ngSubmit)="onSubmit()" class="login-form">
+      <div class="form-group">
+        <label for="email">Email address</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          [(ngModel)]="email"
+          required
+          autocomplete="email"
+        />
+      </div>
+
+      <div class="form-group">
+        <div class="label-row">
+          <label for="password">Password</label>
+          <a href="#" class="forgot-link">Forgot password?</a>
+        </div>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          [(ngModel)]="password"
+          required
+          autocomplete="current-password"
+        />
+      </div>
+
+      <button type="submit" class="btn-primary">Login</button>
+    </form>
+
+    <div class="login-prompt">
+      <p>
+        New to GameVault?
+        <a (click)="goToRegister()" class="link">Create an account</a>.
+      </p>
+    </div>
+  </div>
+</div>
