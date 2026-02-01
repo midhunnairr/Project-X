@@ -1,0 +1,64 @@
+.game-card {
+  border: 1px solid #d3d6db;
+  border-radius: 3px;
+  overflow: hidden;
+  background: #f6f7f9;
+  transition: box-shadow 0.2s;
+}
+
+.game-card:hover {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.game-card-image {
+  width: 100%;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  color: #fff;
+  border-bottom: 1px solid #d3d6db;
+}
+
+.game-card-body {
+  padding: 10px;
+}
+
+.game-card-title {
+  font-size: 13px;
+  font-weight: bold;
+  color: #3b5998;
+  margin-bottom: 4px;
+}
+
+.game-card-meta {
+  font-size: 10px;
+  color: #90949c;
+  margin-bottom: 8px;
+}
+
+.game-card-desc {
+  font-size: 11px;
+  color: #666;
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+
+.fb-button {
+  background: linear-gradient(to bottom, #5b74a8, #3b5998);
+  border: 1px solid #29447e;
+  color: #fff;
+  padding: 3px 8px;
+  font-size: 10px;
+  font-weight: bold;
+  border-radius: 2px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  box-shadow: 0 1px 0 rgba(255,255,255,0.2) inset;
+}
+
+.fb-button:hover {
+  background: linear-gradient(to bottom, #4c649f, #2f4788);
+}

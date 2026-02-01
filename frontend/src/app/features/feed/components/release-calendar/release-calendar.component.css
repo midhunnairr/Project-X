@@ -1,0 +1,109 @@
+.content-box {
+  background: #fff;
+  border: 1px solid #d3d6db;
+  margin-bottom: 10px;
+  border-radius: 3px;
+  animation: fadeIn 0.4s ease;
+}
+
+.content-box-header {
+  background: linear-gradient(to bottom, #f6f7f9, #e9ebee);
+  border-bottom: 1px solid #d3d6db;
+  padding: 8px 12px;
+  font-size: 13px;
+  font-weight: bold;
+  color: #333;
+}
+
+.content-box-body {
+  padding: 12px;
+}
+
+.calendar-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.calendar-item {
+  display: flex;
+  gap: 12px;
+  padding: 10px;
+  border-bottom: 1px solid #e5e5e5;
+  align-items: center;
+}
+
+.calendar-item:last-child {
+  border-bottom: none;
+}
+
+.calendar-date {
+  text-align: center;
+  background: linear-gradient(to bottom, #f6f7f9, #e9ebee);
+  border: 1px solid #d3d6db;
+  border-radius: 3px;
+  padding: 8px;
+  min-width: 60px;
+}
+
+.calendar-date-day {
+  font-size: 24px;
+  font-weight: bold;
+  color: #3b5998;
+  line-height: 1;
+}
+
+.calendar-date-month {
+  font-size: 10px;
+  color: #666;
+  text-transform: uppercase;
+}
+
+.calendar-info {
+  flex: 1;
+}
+
+.calendar-title {
+  font-size: 13px;
+  font-weight: bold;
+  color: #3b5998;
+  margin-bottom: 3px;
+}
+
+.calendar-platform {
+  font-size: 10px;
+  color: #90949c;
+}
+
+.fb-button {
+  background: linear-gradient(to bottom, #5b74a8, #3b5998);
+  border: 1px solid #29447e;
+  color: #fff;
+  padding: 3px 8px;
+  font-size: 10px;
+  font-weight: bold;
+  border-radius: 2px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  box-shadow: 0 1px 0 rgba(255,255,255,0.2) inset;
+}
+
+.fb-button:hover {
+  background: linear-gradient(to bottom, #4c649f, #2f4788);
+}
+
+.fb-button-gray {
+  background: linear-gradient(to bottom, #fff, #e8e8e8);
+  border: 1px solid #999;
+  color: #333;
+}
+
+.fb-button-gray:hover {
+  background: linear-gradient(to bottom, #f8f8f8, #dedede);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

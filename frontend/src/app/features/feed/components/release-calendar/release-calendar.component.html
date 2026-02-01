@@ -1,0 +1,18 @@
+<div class="content-box">
+  <div class="content-box-header">📅 Release Calendar - February 2026</div>
+  <div class="content-box-body">
+    <ul class="calendar-list">
+      <li class="calendar-item" *ngFor="let release of releases">
+        <div class="calendar-date">
+          <div class="calendar-date-day">{{ release.releaseDate | date:'dd' }}</div>
+          <div class="calendar-date-month">{{ release.releaseDate | date:'MMM' }}</div>
+        </div>
+        <div class="calendar-info">
+          <div class="calendar-title">{{ release.title }}</div>
+          <div class="calendar-platform">{{ release.platforms }}</div>
+        </div>
+        <a href="#" class="fb-button fb-button-gray">Remind Me</a>
+      </li>
+    </ul>
+  </div>
+</div>

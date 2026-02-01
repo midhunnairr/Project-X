@@ -1,0 +1,52 @@
+<div class="container" *ngIf="user">
+  <!-- Left Sidebar -->
+  <app-sidebar [user]="user" [friends]="friends"></app-sidebar>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <!-- Profile Header -->
+    <app-profile-header [user]="user"></app-profile-header>
+
+    <!-- Write Something -->
+    <div class="content-box">
+      <div class="box-content">
+        <textarea class="post-input" [(ngModel)]="postContent" rows="3" placeholder="What are you playing?">
+        </textarea>
+        <div class="post-actions-bar">
+          <div class="post-buttons">
+            <button class="btn btn-secondary">📷 Add Game</button>
+            <button class="btn btn-secondary">⭐ Rate Game</button>
+          </div>
+          <button class="btn btn-primary" (click)="sharePost()">Share</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Filter Tabs -->
+    <div class="filter-tabs">
+      <div class="filter-tab" [class.active]="activeFilter === 'all'" (click)="setFilter('all')">
+        All Activity
+      </div>
+      <div class="filter-tab" [class.active]="activeFilter === 'reviews'" (click)="setFilter('reviews')">
+        Reviews
+      </div>
+      <div class="filter-tab" [class.active]="activeFilter === 'playing'" (click)="setFilter('playing')">
+        Now Playing
+      </div>
+      <div class="filter-tab" [class.active]="activeFilter === 'completed'" (click)="setFilter('completed')">
+        Completed
+      </div>
+    </div>
+
+    <!-- Wall Posts -->
+    <div class="content-box">
+      <app-wall-post *ngFor="let post of wallPosts" [post]="post" (like)="onLike($event)" (comment)="onComment($event)"
+        (share)="onShare($event)">
+      </app-wall-post>
+    </div>
+  </div>
+
+  <!-- Right Sidebar -->
+  <app-activity-sidebar [currentlyPlaying]="currentlyPlaying" [recentActivity]="recentActivity">
+  </app-activity-sidebar>
+</div>

@@ -1,0 +1,81 @@
+<div class="main-content">
+  <div class="container">
+    <div class="content-wrapper">
+
+      <div class="welcome-section">
+        <h2>GameX brings gamers together to play, share, and compete like never before.</h2>
+      </div>
+
+
+      <div class="signup-form">
+        <h3>Sign Up</h3>
+        <p class="signup-subtitle">It's free and always will be.</p>
+        <form (ngSubmit)="onSignup()">
+
+          <div class="form-group">
+            <input type="text" [(ngModel)]="signupData.username" name="signupUsername" placeholder="Your Username"
+              class="form-input">
+          </div>
+          <div class="form-group">
+            <input type="text" [(ngModel)]="signupData.email" name="signupEmail" placeholder="Your Email"
+              class="form-input">
+          </div>
+
+          <div class="form-group">
+            <input type="password" [(ngModel)]="signupData.password" name="signupPassword" placeholder="New Password"
+              class="form-input">
+          </div>
+
+          <div class="form-group">
+            <label class="section-label">Birthday:</label>
+            <div class="birthday-row">
+              <select [(ngModel)]="signupData.month" name="month" class="form-select">
+                <option value="">Month</option>
+                <option *ngFor="let month of months; let i = index" [value]="i + 1">{{ month }}</option>
+              </select>
+              <select [(ngModel)]="signupData.day" name="day" class="form-select small">
+                <option value="">Day</option>
+                <option *ngFor="let day of days" [value]="day">{{ day }}</option>
+              </select>
+              <select [(ngModel)]="signupData.year" name="year" class="form-select small">
+                <option value="">Year</option>
+                <option *ngFor="let year of years" [value]="year">{{ year }}</option>
+              </select>
+            </div>
+            <a href="#" class="why-link">Why do I need to provide my birthday?</a>
+          </div>
+
+          <div class="form-group">
+            <label class="section-label">I am:</label>
+            <div class="gender-row">
+              <label class="radio-label">
+                <input type="radio" [(ngModel)]="signupData.gender" name="gender" value="female"> Female
+              </label>
+              <label class="radio-label">
+                <input type="radio" [(ngModel)]="signupData.gender" name="gender" value="male"> Male
+              </label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <p class="terms-text">
+              By clicking Sign Up, you agree to our <a href="#">Terms</a> and that you have read our
+              <a href="#">Data Use Policy</a>, including our <a href="#">Cookie Use</a>.
+            </p>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn-signup">Sign Up</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="footer">
+
+  <div class="copyright">
+    GameX © 2026
+  </div>
+</div> -->

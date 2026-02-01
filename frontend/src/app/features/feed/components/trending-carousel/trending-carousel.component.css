@@ -1,0 +1,121 @@
+.content-box {
+  background: #fff;
+  border: 1px solid #d3d6db;
+  margin-bottom: 10px;
+  border-radius: 3px;
+  animation: fadeIn 0.4s ease;
+}
+
+.content-box-header {
+  background: linear-gradient(to bottom, #f6f7f9, #e9ebee);
+  border-bottom: 1px solid #d3d6db;
+  padding: 8px 12px;
+  font-size: 13px;
+  font-weight: bold;
+  color: #333;
+}
+
+.content-box-body {
+  padding: 12px;
+}
+
+.trending-carousel {
+  position: relative;
+  overflow: hidden;
+  height: 220px;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.trending-game {
+  min-width: 100%;
+  display: flex;
+  gap: 15px;
+  padding: 10px;
+}
+
+.trending-game-image {
+  width: 300px;
+  height: 200px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.trending-game-info {
+  flex: 1;
+}
+
+.trending-game-info h2 {
+  font-size: 18px;
+  color: #3b5998;
+  margin-bottom: 8px;
+}
+
+.trending-game-info p {
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 10px;
+  font-size: 12px;
+}
+
+.fb-button {
+  background: linear-gradient(to bottom, #5b74a8, #3b5998);
+  border: 1px solid #29447e;
+  color: #fff;
+  padding: 4px 12px;
+  font-size: 11px;
+  font-weight: bold;
+  border-radius: 2px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  box-shadow: 0 1px 0 rgba(255,255,255,0.2) inset;
+  margin-right: 5px;
+}
+
+.fb-button:hover {
+  background: linear-gradient(to bottom, #4c649f, #2f4788);
+}
+
+.fb-button-gray {
+  background: linear-gradient(to bottom, #fff, #e8e8e8);
+  border: 1px solid #999;
+  color: #333;
+}
+
+.fb-button-gray:hover {
+  background: linear-gradient(to bottom, #f8f8f8, #dedede);
+}
+
+.carousel-dots {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: #ccc;
+  border-radius: 50%;
+  margin: 0 3px;
+  cursor: pointer;
+}
+
+.dot.active {
+  background: #3b5998;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

@@ -1,0 +1,74 @@
+<div class="sidebar">
+  <!-- Currently Playing -->
+  <div class="sidebar-section">
+    <div class="section-header">Currently Playing</div>
+    <div class="section-content">
+      <div class="activity-game" *ngFor="let game of currentlyPlaying">
+        <div class="activity-cover"></div>
+        <div class="activity-info">
+          <div class="activity-title">{{ game.game.title }}</div>
+          <div class="activity-meta">{{ game.hoursPlayed }} hours played</div>
+          <div class="progress-bar">
+            <div class="progress-fill" [style.width.%]="game.progress"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Recent Activity -->
+  <div class="sidebar-section">
+    <div class="section-header">Recent Activity</div>
+    <div class="section-content">
+      <div class="activity-item" *ngFor="let activity of recentActivity">
+        <strong>{{ activity.userName }}</strong>
+        {{ activity.description }}
+        <div class="activity-time">{{ getTimeAgo(activity.timestamp) }}</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Recommended Games -->
+  <div class="sidebar-section">
+    <div class="section-header">Recommended For You</div>
+    <div class="section-content">
+      <div class="activity-game">
+        <div class="activity-cover" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);"></div>
+        <div class="activity-info">
+          <div class="activity-title">Disco Elysium</div>
+          <div class="activity-meta">Based on your taste</div>
+          <div class="rating-stars">★★★★★</div>
+        </div>
+      </div>
+      <div class="activity-game">
+        <div class="activity-cover" style="background: linear-gradient(135deg, #30cfd0 0%, #330867 100%);"></div>
+        <div class="activity-info">
+          <div class="activity-title">Sekiro</div>
+          <div class="activity-meta">32 friends played</div>
+          <div class="rating-stars">★★★★☆</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Upcoming Releases -->
+  <div class="sidebar-section">
+    <div class="section-header">Upcoming Releases</div>
+    <div class="section-content">
+      <div class="activity-item">
+        <strong>Hollow Knight: Silksong</strong>
+        <div class="activity-meta">TBA 2024</div>
+        <div class="wishlist-btn">
+          <button class="btn btn-secondary">Add to Wishlist</button>
+        </div>
+      </div>
+      <div class="activity-item">
+        <strong>Final Fantasy XVI</strong>
+        <div class="activity-meta">June 22, 2024</div>
+        <div class="wishlist-btn">
+          <button class="btn btn-secondary">Add to Wishlist</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

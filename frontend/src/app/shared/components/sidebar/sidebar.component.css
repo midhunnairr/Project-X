@@ -1,0 +1,106 @@
+.sidebar-section {
+  background: white;
+  border: 1px solid #d3d6db;
+  border-radius: 3px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.section-header {
+  background: #f2f2f2;
+  padding: 8px 10px;
+  font-weight: bold;
+  color: #333;
+  border-bottom: 1px solid #d3d6db;
+  font-size: 11px;
+}
+
+.section-content {
+  padding: 10px;
+}
+
+.info-row {
+  margin-bottom: 8px;
+  font-size: 11px;
+}
+
+.info-row:last-child {
+  margin-bottom: 0;
+}
+
+.info-label {
+  color: #666;
+  margin-bottom: 3px;
+}
+
+.info-value {
+  font-weight: bold;
+}
+
+.friend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px;
+  border-radius: 2px;
+  transition: background 0.2s;
+  cursor: pointer;
+}
+
+.friend-item:hover {
+  background: #f2f2f2;
+}
+
+.friend-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.friend-name {
+  font-weight: bold;
+  font-size: 11px;
+}
+
+.friend-status {
+  font-size: 10px;
+  color: #666;
+}
+
+.gaming-stat {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+  border-bottom: 1px solid #e5e5e5;
+  font-size: 11px;
+}
+
+.gaming-stat:last-child {
+  border-bottom: none;
+}
+
+.stat-name {
+  color: #666;
+}
+
+.stat-value {
+  font-weight: bold;
+  color: #3b5998;
+}
+
+.see-all {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.action-link {
+  color: #3b5998;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 11px;
+}
+
+.action-link:hover {
+  text-decoration: underline;
+}

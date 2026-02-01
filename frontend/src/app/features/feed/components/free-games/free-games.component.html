@@ -1,0 +1,19 @@
+<div class="content-box">
+  <div class="content-box-header">🎁 Free Games This Week</div>
+  <div class="content-box-body">
+    <ul class="free-games-list">
+      <li class="free-game-item" *ngFor="let game of freeGames">
+        <div class="free-game-icon" [style.background]="game.gradient">
+          {{ game.icon }}
+        </div>
+        <div class="free-game-info">
+          <div class="free-game-title">
+            {{ game.title }} <span class="free-tag">FREE</span>
+          </div>
+          <div class="free-game-meta">{{ game.store }} • Free until {{ game.validUntil }}</div>
+        </div>
+        <a href="#" class="fb-button">Claim Now</a>
+      </li>
+    </ul>
+  </div>
+</div>

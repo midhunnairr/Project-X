@@ -1,0 +1,15 @@
+<table class="data-table">
+  <thead>
+    <tr>
+      <th *ngFor="let c of columns">{{ c.header }}</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let row of data">
+      <td *ngFor="let c of columns">
+        {{ row[c.key] }}
+      </td>
+    </tr>
+  </tbody>
+</table>
