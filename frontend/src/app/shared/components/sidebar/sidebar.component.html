@@ -1,0 +1,71 @@
+<div class="sidebar">
+  <!-- About Section -->
+  <div class="sidebar-section">
+    <div class="section-header">About</div>
+    <div class="section-content">
+      <div class="info-row">
+        <div class="info-label">Favorite Genre</div>
+        <div class="info-value">{{ user.favoriteGenres.join(', ') }}</div>
+      </div>
+      <div class="info-row">
+        <div class="info-label">Gaming Since</div>
+        <div class="info-value">{{ user.gamingSince }}</div>
+      </div>
+      <div class="info-row">
+        <div class="info-label">Platforms</div>
+        <div class="info-value">{{ user.platforms.join(', ') }}</div>
+      </div>
+      <div class="info-row">
+        <div class="info-label">Location</div>
+        <div class="info-value">{{ user.location }}</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Gaming Stats -->
+  <div class="sidebar-section">
+    <div class="section-header">Gaming Stats</div>
+    <div class="section-content">
+      <div class="gaming-stat">
+        <span class="stat-name">Games Played</span>
+        <span class="stat-value">{{ user.stats.gamesPlayed }}</span>
+      </div>
+      <div class="gaming-stat">
+        <span class="stat-name">Currently Playing</span>
+        <span class="stat-value">{{ user.stats.currentlyPlaying }}</span>
+      </div>
+      <div class="gaming-stat">
+        <span class="stat-name">Completed</span>
+        <span class="stat-value">{{ user.stats.completed }}</span>
+      </div>
+      <div class="gaming-stat">
+        <span class="stat-name">Hours Logged</span>
+        <span class="stat-value">{{ user.stats.hoursLogged }}</span>
+      </div>
+      <div class="gaming-stat">
+        <span class="stat-name">Achievements</span>
+        <span class="stat-value">{{ user.stats.achievements }}</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Gaming Friends -->
+  <div class="sidebar-section">
+    <div class="section-header">Gaming Friends ({{ user.stats.friends }})</div>
+    <div class="section-content">
+      <div class="friend-item" *ngFor="let friend of friends; let i = index">
+        <div class="friend-avatar" [style.background]="getGradient(i)"></div>
+        <div>
+          <div class="friend-name">{{ friend.name }}</div>
+          <div class="friend-status">
+            {{ friend.status === 'online' ? 'Online' :
+               friend.status === 'playing' ? 'Playing ' + friend.currentGame : 'Offline' }}
+          </div>
+        </div>
+      </div>
+      <div class="see-all">
+        <a href="javascript:void(0)" class="action-link">See All Friends</a>
+      </div>
+    </div>
+  </div>
+</div>

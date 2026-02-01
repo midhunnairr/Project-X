@@ -1,0 +1,5 @@
+<div class="stats-grid">
+  <app-stats-card *ngFor="let stat of stats" [title]="stat.title" [value]="stat.value" [change]="stat.change"
+    [negative]="stat.negative">
+  </app-stats-card>
+</div>

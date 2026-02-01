@@ -1,0 +1,31 @@
+.content-box {
+  background: #fff;
+  border: 1px solid #d3d6db;
+  margin-bottom: 10px;
+  border-radius: 3px;
+  animation: fadeIn 0.4s ease;
+}
+
+.content-box-header {
+  background: linear-gradient(to bottom, #f6f7f9, #e9ebee);
+  border-bottom: 1px solid #d3d6db;
+  padding: 8px 12px;
+  font-size: 13px;
+  font-weight: bold;
+  color: #333;
+}
+
+.content-box-body {
+  padding: 12px;
+}
+
+.game-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

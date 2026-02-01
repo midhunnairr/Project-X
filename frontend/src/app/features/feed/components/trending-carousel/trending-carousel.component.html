@@ -1,0 +1,27 @@
+<div class="content-box">
+  <div class="content-box-header">🔥 Trending Games</div>
+  <div class="content-box-body">
+    <div class="trending-carousel">
+      <div class="carousel-track" [style.transform]="'translateX(-' + currentSlide * 100 + '%)'">
+        <div class="trending-game" *ngFor="let game of trendingGames">
+          <div class="trending-game-image" [style.background]="game.gradient">
+          </div>
+          <div class="trending-game-info">
+            <h2>{{ game.title }}</h2>
+            <p>{{ game.fullDescription }}</p>
+            <a href="#" class="fb-button">Play Now</a>
+            <a href="#" class="fb-button fb-button-gray">Add to Wishlist</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-dots">
+      <span
+        *ngFor="let game of trendingGames; let i = index"
+        class="dot"
+        [class.active]="i === currentSlide"
+        (click)="goToSlide(i)">
+      </span>
+    </div>
+  </div>
+</div>

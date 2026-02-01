@@ -1,0 +1,124 @@
+.wall-post {
+  padding: 12px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.wall-post:last-child {
+  border-bottom: none;
+}
+
+.post-header {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.post-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.post-info {
+  flex: 1;
+}
+
+.post-author {
+  font-weight: bold;
+  color: #3b5998;
+  font-size: 12px;
+}
+
+.post-time {
+  color: #999;
+  font-size: 10px;
+}
+
+.post-content {
+  margin-left: 50px;
+  font-size: 12px;
+  line-height: 1.4;
+  margin-bottom: 8px;
+}
+
+.game-review {
+  background: #f7f7f7;
+  border: 1px solid #d3d6db;
+  border-radius: 3px;
+  padding: 10px;
+  margin: 8px 0;
+}
+
+.game-header {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.game-cover {
+  width: 60px;
+  height: 80px;
+  background: linear-gradient(135deg, #434343 0%, #000000 100%);
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.game-info {
+  flex: 1;
+}
+
+.game-title {
+  font-weight: bold;
+  font-size: 13px;
+  color: #3b5998;
+  margin-bottom: 3px;
+}
+
+.game-meta {
+  font-size: 10px;
+  color: #666;
+}
+
+.rating-stars {
+  color: #ffc107;
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.review-text {
+  font-size: 11px;
+  line-height: 1.4;
+  color: #333;
+}
+
+.platforms {
+  display: flex;
+  gap: 5px;
+  margin-top: 5px;
+}
+
+.platform-icon {
+  padding: 2px 6px;
+  background: #e5e5e5;
+  border-radius: 2px;
+  font-size: 9px;
+  color: #666;
+}
+
+.post-actions {
+  margin-left: 50px;
+  display: flex;
+  gap: 15px;
+  font-size: 10px;
+}
+
+.action-link {
+  color: #3b5998;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.action-link:hover {
+  text-decoration: underline;
+}

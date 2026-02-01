@@ -1,0 +1,51 @@
+<div class="sidebar-right">
+  <!-- Flash Offer -->
+  <div class="offer-banner">
+    <h3>⚡ FLASH SALE ⚡</h3>
+    <p>Up to 90% OFF on 500+ games!</p>
+    <div class="offer-countdown">{{ countdown }}</div>
+    <a href="#" class="fb-button">Shop Now</a>
+  </div>
+
+  <!-- Sponsored/Ad -->
+  <div class="ad-box" *ngFor="let ad of ads">
+    <div class="ad-label">Sponsored</div>
+    <div class="ad-content">
+      <div class="ad-image" [style.background]="ad.gradient"></div>
+      <div class="ad-text">
+        <div class="ad-title">{{ ad.title }}</div>
+        <div class="ad-description">{{ ad.description }}</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Friends Playing -->
+  <div class="sidebar-module">
+    <h3>👥 Friends Playing</h3>
+    <ul>
+      <li *ngFor="let friend of friendsActivity">
+        <div class="friend-name">{{ friend.name }}</div>
+        <div class="friend-game">Playing {{ friend.game }}</div>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Recent Activity -->
+  <div class="sidebar-module">
+    <h3>📢 Recent Activity</h3>
+    <ul>
+      <li>
+        <strong>John Smith</strong> earned the achievement "Master Strategist"
+        <div class="activity-time">2 hours ago</div>
+      </li>
+      <li>
+        <strong>Lisa Wang</strong> added 3 games to wishlist
+        <div class="activity-time">5 hours ago</div>
+      </li>
+      <li>
+        <strong>Tom Brown</strong> wrote a review for "Legends of Eldoria"
+        <div class="activity-time">1 day ago</div>
+      </li>
+    </ul>
+  </div>
+</div>

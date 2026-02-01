@@ -1,0 +1,60 @@
+<div class="profile-header">
+  <div class="cover-photo"></div>
+  <div class="profile-info">
+    <div class="profile-picture"></div>
+    <div class="profile-name-area">
+      <div class="profile-name">{{ user.name }}</div>
+      <div class="profile-bio">{{ user.bio }}</div>
+      <div class="profile-stats">
+        <div class="stat">
+          <div class="stat-number">{{ user.stats.friends }}</div>
+          <div class="stat-label">Friends</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">{{ user.stats.gamesPlayed }}</div>
+          <div class="stat-label">Games</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">{{ user.stats.reviews }}</div>
+          <div class="stat-label">Reviews</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">{{ user.stats.hoursLogged }}</div>
+          <div class="stat-label">Hours</div>
+        </div>
+      </div>
+      <div class="profile-tabs">
+        <div
+          class="tab"
+          [class.active]="activeTab === 'wall'"
+          (click)="setActiveTab('wall')">
+          Wall
+        </div>
+        <div
+          class="tab"
+          [class.active]="activeTab === 'reviews'"
+          (click)="setActiveTab('reviews')">
+          Reviews
+        </div>
+        <div
+          class="tab"
+          [class.active]="activeTab === 'library'"
+          (click)="setActiveTab('library')">
+          Library
+        </div>
+        <div
+          class="tab"
+          [class.active]="activeTab === 'wishlist'"
+          (click)="setActiveTab('wishlist')">
+          Wishlist
+        </div>
+        <div
+          class="tab"
+          [class.active]="activeTab === 'friends'"
+          (click)="setActiveTab('friends')">
+          Friends
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

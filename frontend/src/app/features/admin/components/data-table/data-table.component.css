@@ -1,0 +1,71 @@
+/* Base table style */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;        /* Remove double borders */
+  font-family: "Lucida Grande", Verdana, Geneva, sans-serif;
+  font-size: 13px;
+  color: #333;
+  background-color: #f6f7f9;        /* Light gray panel background */
+  margin: 0;
+}
+
+/* Table header */
+.data-table thead {
+  background-color: #e9ebee;        /* Slightly darker gray */
+}
+
+.data-table th {
+  text-align: left;
+  padding: 8px 12px;
+  font-weight: bold;
+  border-bottom: 1px solid #d8dfea; /* Subtle bottom border */
+  color: #4b4f56;                   /* Dark gray text */
+}
+
+/* Table body rows */
+.data-table tbody tr {
+  background-color: #fff;            /* White row background */
+}
+
+.data-table tbody tr:nth-child(even) {
+  background-color: #f6f7f9;        /* Alternating row color */
+}
+
+.data-table td {
+  padding: 8px 12px;
+  border-bottom: 1px solid #d8dfea; /* Light border between rows */
+}
+
+/* Hover effect */
+.data-table tbody tr:hover {
+  background-color: #e9ebee;         /* Subtle hover effect */
+}
+
+.badge {
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 11px;
+  font-weight: bold;
+  color: #fff;
+  display: inline-block;
+}
+
+.badge-success { background-color: #4caf50; }
+.badge-warning { background-color: #ffc107; color: #333; }
+.badge-danger { background-color: #d9534f; }
+
+/* User avatar in table */
+.user-avatar {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  border-radius: 50%;
+  background-color: #3b5998;
+  color: #fff;
+  text-align: center;
+  font-size: 12px;
+  font-weight: bold;
+  margin-right: 6px;
+  vertical-align: middle;
+}
